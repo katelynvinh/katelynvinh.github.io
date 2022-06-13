@@ -1,0 +1,37 @@
+/* medium screen | tablet & landscape mobile */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+      font-size: $otherscreens-fontsize;
+    }
+  
+    nav ul {
+      flex-flow: column wrap;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .main {
+      flex-flow: column wrap;
+    }
+  
+    .main article {
+      flex-basis: 60%;
+    }
+  
+    picture {
+      flex-basis: 35%;
+    }
+  
+    .products-content {
+      grid-column-gap: 3rem;
+      grid-template-columns: 35% 60%;
+    }
+  
+    .article-contact {
+      flex-basis: 45% !important;
+    }
+  
+    .picture-contact {
+      flex-basis: 50% !important;
+    }
+  }

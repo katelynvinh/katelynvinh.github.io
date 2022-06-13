@@ -1,0 +1,180 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    background-color: $color-navyblue;
+    @include spacing($zero, $zero);
+    font-family: $body-font, sans-serif;
+    line-height: $heading-fontsize;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    font-family: $headings-font, sans-serif;
+  }
+  
+  h1 {
+    font-size: $heading-fontsize;
+    margin-bottom: $zero;
+  }
+  
+  /* make images flexible */
+  img {
+    max-width: 100%;
+  }
+  
+  a {
+    color: $color-brown;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  header {
+    border-bottom: 10px solid $color-orange;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* navbar styling */
+  nav {
+    flex-flow: column wrap;
+    padding: $zero $heading-fontsize;
+  }
+  
+  nav ul {
+    @include spacing($zero, $zero);
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav li {
+    margin: $zero 1rem 1rem 1rem;
+    font-size: $nav-fontsize;
+  }
+  
+  /* max width on the image in pixels */
+  nav .logo img {
+    max-width: 150px;
+  }
+  
+  /* flex basis on the image container, li */
+  nav .logo {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+  
+  nav a:hover {
+    color: $color-orange;
+  }
+  
+  /* establishes a white background */
+  .main-bkgd {
+    background: $color-white url(https://assets.codepen.io/6306176/gulp-bean-bkgd.jpg) repeat-x bottom;
+    padding-bottom: 300px;
+  }
+  
+  /* sits inside of the white background, centered */
+  .main {
+    max-width: 1200px;
+    margin: $zero auto;
+    padding: $heading-fontsize;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .main-products {
+    max-width: 1200px;
+    margin: $zero auto;
+    padding: 2rem;
+  }
+  
+  article {
+    flex-basis: 73%;
+  }
+  
+  figure {
+    margin: 3rem $zero $zero $zero;
+    flex-basis: 25%;
+    background-color: $color-navyblue;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  figure img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  figcaption {
+    color: $color-lightgrey;
+    padding: 0.5rem;
+  }
+  
+  .button {
+    display: inline-block;
+    background-color: $color-brown;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin: $zero;
+    color: $color-lightgrey;
+    text-decoration: none;
+    border: 3px solid $color-brown;
+  }
+  
+  .button:hover {
+    background-color: $color-lightgrey;
+    color: $color-brown;
+  }
+  //footer is nested
+  footer {
+    color: $color-lightgrey;
+    text-align: center;
+    border-top: 10px solid $color-orange;
+  
+    ul {
+      list-style-type: none;
+      @include spacing($zero, $zero);
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+  
+      a {
+        color: $color-lightgrey;
+        font-size: $heading-fontsize;
+        display: block;
+        margin: $zero 1rem 3rem 1rem;
+  
+        &:hover {
+          color: $color-orange;
+        }
+      }
+    }
+  }
+  
+  /* Products Page */
+  .products-content {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+  }
